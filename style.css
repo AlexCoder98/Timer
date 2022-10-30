@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,
+::before,
+::after,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', arial, sans-serif;
+}
+
+body {
+    background-color: #F1F1F3;
+}
+
+#wrapper {
+    width: 70%;
+    margin: 5% auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: #022936;
+}
+
+#wrapper>* {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#wrapper button {
+    padding: 1% 2%;
+    color: #F1F1F3;
+    text-shadow: 0 0 5px #000;
+    background-color: #14abb9;
+    font-size: 24px;
+    border: none;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+#wrapper button:hover {
+    background-color: #13949f;
+}
+
+/* HEADERS SECTION */
+
+#wrapper .headers-container {
+    margin-bottom: 1%;
+}
+
+#wrapper .headers-container>* {
+    width: 50%;
+    font-size: 40px;
+    color: #F1F1F3;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+}
+
+/* MAIN SECTION */
+
+#wrapper .main-container {
+    border-top: 2px solid #14abb9;
+    border-bottom: 2px solid #14abb9;
+}
+
+#wrapper .main-container>* {
+    width: 50%;
+    margin: 2% 0;
+    padding: 2% 0;
+    text-align: center;
+    align-self: center;
+}
+
+#wrapper .main-container .timer {
+    font-size: 40px;
+    color: #F1F1F3;
+    text-shadow: 0 0 5px #000;
+    font-weight: normal;
+}
+
+#wrapper .main-container .laps-time-section {
+    flex-direction: column;
+}
+
+#wrapper .main-container .laps-time-section .laps-list {
+    text-align: left;
+    margin: 0 5%;
+    list-style: none;
+}
+
+#wrapper .main-container .laps-time-section .laps-list .lap {
+    padding: 1% 2%;
+    margin: 1% 0;
+    color: #F1F1F3;
+    text-shadow: 0 0 5px #000;
+    background-color: #14abb9;
+    font-size: 24px;
+    animation: addLap 1s ease-out;
+}
+
+#wrapper .main-container .laps-time-section .message.active {
+    display: block;
+}
+
+#wrapper .main-container .laps-time-section .message {
+    display: none;
+    color: #F1F1F3;
+    text-shadow: 0 0 5px #000;
+    font-size: 36px;
+}
+
+@keyframes addLap {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* BTN SECTION */
+
+#wrapper .btn-footer-container {
+    margin-top: 2%;
+}
+
+#wrapper .btn-footer-container>* {
+    width: 50%;
+    text-align: center;
+}
+
+#wrapper .btn-footer-container .command-btn-section>* {
+    align-self: center;
+    margin: 0 1%;
+}
+
+#wrapper .btn-footer-container .clear-lap-list {
+    align-self: center;
+    display: none;
+    margin: 0 auto;
+}
+
+#wrapper .btn-footer-container .clear-lap-list.active {
+    display: block;
+}
+
+/* RESPONSIVE STYLES */
+
+@media(max-width: 1024px) {
+    #wrapper {
+        width: 90%;
+    }
+
+    #wrapper button {
+        font-size: 22px;
+    }
+
+    /* HEADERS SECTION */
+    #wrapper .headers-container>* {
+        font-size: 34px;
+    }
+
+    /* MAIN SECTION */
+
+    #wrapper .main-container .timer {
+        font-size: 38px;
+    }
+
+    #wrapper .main-container .laps-time-section .message {
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 768px) {
+    #wrapper {
+        width: 95%;
+    }
+
+    #wrapper button {
+        font-size: 18px;
+    }
+
+    /* HEADERS SECTION */
+    #wrapper .headers-container>* {
+        font-size: 30px;
+    }
+
+    /* MAIN SECTION */
+
+    #wrapper .main-container .timer {
+        font-size: 34px;
+    }
+
+    #wrapper .main-container .laps-time-section .laps-list .lap {
+        font-size: 18px;
+    }
+
+    #wrapper .main-container .laps-time-section .message {
+        font-size: 28px;
+    }
+
+    /* BTN SECTION */
+
+    #wrapper .btn-footer-container>* {
+        width: 50%;
+        text-align: center;
+    }
+
+    #wrapper .btn-footer-container .command-btn-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #wrapper .btn-footer-container .command-btn-section>* {
+        width: 48%;
+        margin: 1%;
+    }
+
+}

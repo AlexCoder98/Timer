@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="headers-container">
+            <h2>Timer</h2>
+            <h2>Your Laps</h2>
+        </header>
+        <main class="main-container">
+            <section class="timer-section">
+                <h3 class="timer"><span class="hours">00</span> : <span class="minutes">00</span> : <span
+                        class="seconds">00</span></h3>
+            </section>
+            <section class="laps-time-section">
+                <ul class="laps-list"></ul>
+                <p class="message active">No laps yet :(</p>
+            </section>
+        </main>
+        <footer class="btn-footer-container">
+            <section class="command-btn-section">
+                <button class="start">Start</button>
+                <button class="pause">Pause</button>
+                <button class="reset">Reset</button>
+                <button class="add-lap">Add lap</button>
+            </section>
+            <section class="lap-btn-section">
+                <button class="clear-lap-list">Clear</button>
+            </section>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
